@@ -11,7 +11,7 @@ module FoursquareDocument
     end
     
     def self.get_client
-      @client = Foursquare2::Client.new(:client_id => FS_CONFIG.client_id, :client_secret => FS_CONFIG.client_id)
+      @client = Foursquare2::Client.new(:client_id => FS_CONFIG.client_id, :client_secret => FS_CONFIG.client_secret)
     end
   end
 end
