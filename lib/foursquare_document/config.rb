@@ -1,6 +1,6 @@
 # To change this template, choose Tools | Templates
 # and open the template in the editor.
-
+require "foursquare2"
 module FoursquareDocument
   module Config
     Configuration = Struct.new(:client_id,:client_secret)
