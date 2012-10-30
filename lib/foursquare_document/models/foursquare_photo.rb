@@ -9,5 +9,5 @@ class FoursquarePhoto
   field :suffix,    :type => String
   field :source,    :type => Hash
   
-  embedded_in :foursquare_cache
+  embedded_in :foursquare_cache, :inverse_of => :photo
 end
