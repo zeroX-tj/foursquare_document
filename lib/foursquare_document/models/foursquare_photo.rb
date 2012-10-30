@@ -5,10 +5,11 @@ class FoursquarePhoto
   
   field :id,        :type => String
   field :createdAt, :type => DateTime
-  field :sizes,    :type => Array
+  field :prefix,    :type => String
+  field :suffix,    :type => String
   field :source,    :type => Hash
   
   embedded_in :foursquare_cache, :inverse_of => :photo
   
-  attr_accessible :id,:createdAt,:sizes,:source
+  attr_accessible :id,:createdAt,:suffix,:prefix,:source
 end
