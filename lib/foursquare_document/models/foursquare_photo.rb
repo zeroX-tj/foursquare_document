@@ -10,4 +10,6 @@ class FoursquarePhoto
   field :source,    :type => Hash
   
   embedded_in :foursquare_cache, :inverse_of => :photo
+  
+  attr_accessible :id,:createdAt,:prefix,:suffix,:source
 end
