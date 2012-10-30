@@ -17,7 +17,7 @@ class FoursquareCache
   before_save :add_foursquare_photo
   def add_foursquare_photo
     client = FoursquareDocument::Config::get_client
-    raw_info = client.venue_photos(self.id)
+    raw_info = client.venue_photos(self.id,:group => :venue)
     if raw_info.has_key?('items') && raw_info['items'].count > 0
       self.photo = FoursquarePhoto.new(raw_info['items'][0])
     end
