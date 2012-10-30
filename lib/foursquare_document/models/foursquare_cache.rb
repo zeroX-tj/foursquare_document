@@ -14,7 +14,8 @@ class FoursquareCache
   embedded_in :fs_doc,:polymorphic => true
   embeds_one :photo, :class_name => "FoursquarePhoto"
   
-    def add_foursquare_photo
+  before_save :add_foursquare_photo
+  def add_foursquare_photo
     client = FoursquareDocument::Config::get_client
     raw_info = client.venue_photos(self.id)
     if raw_info.has_key?('items') && raw_info['items'].count > 0
