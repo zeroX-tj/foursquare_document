@@ -1,6 +1,8 @@
 require "foursquare_document/version"
 require "foursquare_document/models/foursquare_cache"
+require "foursquare_document/models/foursquare_photo"
 require "foursquare_document/config"
+
 module FoursquareDocument
   module ClassMethods
     def foursquare_id(symbol,index=false)
