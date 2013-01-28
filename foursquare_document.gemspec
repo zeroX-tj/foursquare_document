@@ -2,8 +2,8 @@
 require File.expand_path('../lib/foursquare_document/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Niels V"]
-  gem.email         = ["nvdk@arguslabs.be"]
+  gem.authors       = ["Niels V", "Tim J"]
+  gem.email         = ["tj@arguslabs.be"]
   gem.description   = "Easily add foursquare venue information to any mongoid document."
   gem.summary       = "Embed foursquare venue information to any mongoid document."
   gem.homepage      = ""

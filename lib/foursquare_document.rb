@@ -39,6 +39,14 @@ module FoursquareDocument
     end
   end
 
+  def checkin(access_token)
+    return unless self.fs_id
+    begin
+      client = FoursquareDocument::Config::get_client({:oauth_token => access_token })
+      client.add_checkin({:venueId => self.fs_id, :broadcast => "public"})
+    rescue
+    end
+  end
 
   def self.included(base)
     # no need for activesupport::concern
